@@ -9,7 +9,9 @@ export default function UpdatePost({ show, handleClose, post, refreshPosts }) {
   // Handle update post
   const handleUpdatePost = async () => {
     try {
-      const response = await fetch(`https://blogapi-o0fk.onrender.com/posts/updatePost/${post._id}`, {
+      const response = await fetch(
+        `https://blogapi-o0fk.onrender.com/posts/updatePost/${post._id}`, {
+        // `http://localhost:4000/posts/updatePost/${post._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

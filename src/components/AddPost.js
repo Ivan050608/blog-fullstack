@@ -8,7 +8,9 @@ export default function AddPost({ show, handleClose, refreshPosts }) {
 
   const handleAddPost = async () => {
     try {
-      const response = await fetch("https://blogapi-o0fk.onrender.com/posts/addPost", {
+      const response = await fetch(
+        "https://blogapi-o0fk.onrender.com/posts/addPost", {
+        // "http://localhost:4000/posts/addPost", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

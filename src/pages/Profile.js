@@ -11,7 +11,9 @@ export default function Profile(){
     const [details,setDetails] = useState({});
 
     useEffect(() => {
-        fetch(`https://blogapi-o0fk.onrender.com/users/details`, {
+        fetch(
+            `https://blogapi-o0fk.onrender.com/users/details`, {
+            //  `http://localhost:4000/users/details`, {   
             headers: {
                 Authorization: `Bearer ${ localStorage.getItem('token') }`
             }

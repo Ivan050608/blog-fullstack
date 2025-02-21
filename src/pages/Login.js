@@ -20,7 +20,9 @@ export default function Login() {
 
         // Prevents page redirection via form submission
         e.preventDefault();
-        fetch('https://blogapi-o0fk.onrender.com/users/login', {
+        fetch(
+            'https://blogapi-o0fk.onrender.com/users/login', {
+            // 'http://localhost:4000/users/login', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -68,7 +70,9 @@ export default function Login() {
         
         // The token will be sent as part of the request's header information
         // We put "Bearer" in front of the token to follow implementation standards for JWTs
-        fetch('https://blogapi-o0fk.onrender.com/users/details', {
+        fetch(
+            'https://blogapi-o0fk.onrender.com/users/details', {
+            // 'http://localhost:4000/users/details', {
             headers: {
                 Authorization: `Bearer ${ token }`
             }
@@ -133,7 +137,7 @@ export default function Login() {
             Login
             </Button>
             ) : (
-            <Button variant="danger" type="submit" id="loginBtn" className="w-100" disabled>
+            <Button variant="dark" type="submit" id="loginBtn" className="w-100" disabled>
             Login
             </Button>
             )}
@@ -141,6 +145,10 @@ export default function Login() {
             </Form>       
             )
 }
+
+
+
+
 
 
 

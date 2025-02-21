@@ -30,7 +30,9 @@ export default function Register() {
     function registerUser(e) {
         e.preventDefault();
 
-        fetch('https://blogapi-o0fk.onrender.com/users/register', {
+        fetch(
+            'https://blogapi-o0fk.onrender.com/users/register', {
+            // 'http://localhost:4000/users/register', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -71,7 +73,7 @@ export default function Register() {
 
     return (
         (user.id !== null) ?
-        <Navigate to="/workouts" />
+        <Navigate to="/home" />
         :
         <Form onSubmit={(e) => registerUser(e)}>
         <h1 className="my-5 text-center">Register</h1>
@@ -139,11 +141,11 @@ export default function Register() {
 
         <div className="d-flex justify-content-center">
         {isActive ? (
-            <Button variant="primary" type="submit" id="submitBtn" className="w-100">
+            <Button variant="warning" type="submit" id="submitBtn" className="w-100">
             Submit
             </Button>
             ) : (
-            <Button variant="primary" type="submit" id="submitBtn" className="w-100" disabled>
+            <Button variant="dark" type="submit" id="submitBtn" className="w-100" disabled>
             Submit
             </Button>
             )}

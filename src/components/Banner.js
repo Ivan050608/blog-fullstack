@@ -17,7 +17,7 @@ export default function Banner({ data }) {
         <Col md={8}>
           <h1 className="display-4">{data.title}</h1>
           <p className="lead">{data.description}</p>
-          <Button variant="light" href="/blog">Explore Blog</Button>
+          <Button variant="light" href="/blogs">Explore Blog</Button>
         </Col>
       </Row>
     </div>
